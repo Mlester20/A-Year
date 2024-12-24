@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.pinimg.com/originals/54/d2/0f/54d20f4c9b0f03133986d87ee3391a51.gif');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7);
+    z-index: -1;
+}
+
+.success-animation {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.success-animation img {
+    width: 200px;
+    height: 200px;
+}
+
+.container {
+    width: 90%;
+    max-width: 350px;
+    padding: 15px;
+    z-index: 1;
+}
+
+.passcode-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.hint {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.passcode-display {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.digit {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #fd6b6b;
+    background: transparent;
+}
+
+.digit.filled {
+    background: #fd6b6b;
+}
+
+.numpad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.num-button, .clear-button, .enter-button {
+    background: rgba(253, 107, 107, 0.9);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    aspect-ratio: 1;
+    transition: background 0.3s;
+    width: 100%;
+    height: auto;
+}
+
+.num-button:hover, .clear-button:hover, .enter-button:hover {
+    background: rgba(255, 79, 79, 0.9);
+}
+
+.clear-button, .enter-button {
+    font-size: 14px;
+}
+
+#message {
+    margin-top: 15px;
+    color: #fd6b6b;
+    font-size: 14px;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 370px) {
+    .container {
+        padding: 10px;
+    }
+
+    .passcode-box {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .hint {
+        font-size: 0.8rem;
+    }
+
+    .numpad {
+        gap: 6px;
+        max-width: 220px;
+    }
+
+    .num-button, .clear-button, .enter-button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .clear-button, .enter-button {
+        font-size: 12px;
+    }
+}
