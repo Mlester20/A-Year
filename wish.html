@@ -1,159 +1,157 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Letter</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lora:ital@1&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #fce4ec, #f8bbd0);
-            font-family: 'Lora', serif;
-            line-height: 1.6;
-        }
-
-        .letter-container {
-            max-width: 90%;
-            width: 600px;
-            margin: 20px;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .letter-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .dear {
-            font-family: 'Dancing Script', cursive;
-            font-size: 28px;
-            color: #d81b60;
-            margin-bottom: 20px;
-        }
-
-        .message {
-            font-size: 16px;
-            color: #333;
-            text-align: justify;
-            margin: 30px 0;
-            line-height: 1.8;
-            padding: 0 20px;
-        }
-
-        .signature {
-            text-align: right;
-            margin-top: 40px;
-            font-family: 'Dancing Script', cursive;
-            color: #d81b60;
-        }
-
-        .signature .love {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .signature .name {
-            font-size: 26px;
-        }
-
-        /* Decorative elements */
-        .letter-container::before {
-            content: '❤';
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 24px;
-            color: rgba(216, 27, 96, 0.2);
-        }
-
-        .letter-container::after {
-            content: '❤';
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            font-size: 24px;
-            color: rgba(216, 27, 96, 0.2);
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .letter-container {
-                padding: 25px;
-                margin: 15px;
-            }
-
-            .dear {
-                font-size: 24px;
-            }
-
-            .message {
-                font-size: 15px;
-                padding: 0 10px;
-            }
-
-            .signature {
-                margin-top: 30px;
-            }
-
-            .signature .love {
-                font-size: 20px;
-            }
-
-            .signature .name {
-                font-size: 22px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="letter-container">
-        <div class="letter-content">
-            <div class="dear">Dear Len</div>
-            <div class="message" id="letterMessage"></div>
-            <div class="signature">
-                <div class="love">Sincerely Yours,</div>
-                <div class="name">Mark Lester Raguindin</div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        var letter = [
-`Len,  
-
-It’s been a year and three months since we started this journey together, and I'm still in awe of how much love and happiness you bring into my life. Every moment with you is a gift, and I cherish every laugh, every adventure, and every quiet night spent together.  
-
-Lately, I’ve been doing a lot of thinking. There are moments when life feels heavy, and I find myself searching for a sense of peace—a place where everything feels right. It’s funny how, no matter where I go or what I do, I always seem to come back to you, to us. Your love has become my constant, something I can rely on, even when I haven’t always been the best at showing it.  
-
-I know I’ve made mistakes, but the way you continue to believe in me, to give me another chance, is something I don’t take lightly. It’s a kind of love that makes me realize what’s truly important. No matter how far I go or how long I’m away, the thought of coming back to you feels like coming home.  
-
-I’m not running from anything, and I don’t regret the choices I’ve made. But these places and faces are starting to lose their meaning. What really matters is what I have with you—where love is real and never fails.  
-
-I just want you to know that, even through all the chaos, you’re the one I’m always coming back to. Even at our lowest, I love you unconditionally. Not  grow apart but, but grow together. You cannot unloved by me:)
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Letter</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lora:ital@1&display=swap" rel="stylesheet"> 
+    <style> 
+        body { 
+            margin: 0; 
+            padding: 0; 
+            min-height: 100vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            background: linear-gradient(135deg, #fce4ec, #f8bbd0); 
+            font-family: 'Lora', serif; 
+            line-height: 1.6; 
+        } 
  
-Mark`
-];
-        
-        // Function to display random message
-        function displayRandomMessage() {
-            const messageElement = document.getElementById('letterMessage');
-            const randomIndex = Math.floor(Math.random() * letter.length);
-            messageElement.textContent = letter[randomIndex];
-        }
-
-        // Display a random message when the page loads
-        window.onload = displayRandomMessage;
-    </script>
-</body>
+        .letter-container { 
+            max-width: 90%; 
+            width: 600px; 
+            margin: 20px; 
+            padding: 40px; 
+            background: rgba(255, 255, 255, 0.95); 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+            border-radius: 10px; 
+            position: relative; 
+            overflow: hidden; 
+        } 
+ 
+        .letter-content { 
+            position: relative; 
+            z-index: 1; 
+        } 
+ 
+        .dear { 
+            font-family: 'Dancing Script', cursive; 
+            font-size: 28px; 
+            color: #d81b60; 
+            margin-bottom: 20px; 
+        } 
+ 
+        .message { 
+            font-size: 16px; 
+            color: #333; 
+            text-align: justify; 
+            margin: 30px 0; 
+            line-height: 1.8; 
+            padding: 0 20px; 
+        } 
+ 
+        .signature { 
+            text-align: right; 
+            margin-top: 40px; 
+            font-family: 'Dancing Script', cursive; 
+            color: #d81b60; 
+        } 
+ 
+        .signature .love { 
+            font-size: 24px; 
+            margin-bottom: 10px; 
+        } 
+ 
+        .signature .name { 
+            font-size: 26px; 
+        } 
+ 
+        /* Decorative elements */ 
+        .letter-container::before { 
+            content: '❤'; 
+            position: absolute; 
+            top: 20px; 
+            left: 20px; 
+            font-size: 24px; 
+            color: rgba(216, 27, 96, 0.2); 
+        } 
+ 
+        .letter-container::after { 
+            content: '❤'; 
+            position: absolute; 
+            bottom: 20px; 
+            right: 20px; 
+            font-size: 24px; 
+            color: rgba(216, 27, 96, 0.2); 
+        } 
+ 
+        /* Mobile Responsive */ 
+        @media (max-width: 768px) { 
+            .letter-container { 
+                padding: 25px; 
+                margin: 15px; 
+            } 
+ 
+            .dear { 
+                font-size: 24px; 
+            } 
+ 
+            .message { 
+                font-size: 15px; 
+                padding: 0 10px; 
+            } 
+ 
+            .signature { 
+                margin-top: 30px; 
+            } 
+ 
+            .signature .love { 
+                font-size: 20px; 
+            } 
+ 
+            .signature .name { 
+                font-size: 22px; 
+            } 
+        } 
+    </style> 
+</head> 
+<body> 
+    <div class="letter-container"> 
+        <div class="letter-content"> 
+            <div class="dear">Dear Len</div> 
+            <div class="message" id="letterMessage"></div> 
+            <div class="signature"> 
+                <div class="love">Sincerely Yours,</div> 
+                <div class="name">Mark Lester Raguindin</div> 
+            </div> 
+        </div> 
+    </div> 
+ 
+    <script> 
+        var letter = [ 
+`Len,   
+ 
+It's been a year and three months since we started this journey together, and I'm still in awe of how much love and happiness you bring into my life. Every moment with you is a gift, and I cherish every laugh, every adventure, and every quiet night spent together.   
+ 
+Lately, I've been doing a lot of thinking. There are moments when life feels heavy, and I find myself searching for a sense of peace—a place where everything feels right. It's funny how, no matter where I go or what I do, I always seem to come back to you, to us. Your love has become my constant, something I can rely on, even when I haven't always been the best at showing it.   
+ 
+I know I've made mistakes, but the way you continue to believe in me, to give me another chance, is something I don't take lightly. It's a kind of love that makes me realize what's truly important. No matter how far I go or how long I'm away, the thought of coming back to you feels like coming home.   
+ 
+I'm not running from anything, and I don't regret the choices I've made. But these places and faces are starting to lose their meaning. What really matters is what I have with you—where love is real and never fails.   
+ 
+I just want you to know that, even through all the chaos, you're the one I'm always coming back to. Even at our lowest, I love you unconditionally. Not grow apart, but grow together. You cannot be unloved by me :)` 
+]; 
+         
+        // Function to display message
+        function displayRandomMessage() { 
+            const messageElement = document.getElementById('letterMessage'); 
+            const randomIndex = Math.floor(Math.random() * letter.length); 
+            messageElement.textContent = letter[randomIndex]; 
+        } 
+ 
+        // Display a message when the page loads 
+        window.onload = displayRandomMessage; 
+    </script> 
+</body> 
 </html>
