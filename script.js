@@ -1,4 +1,4 @@
-const correctPasscode = "201826";
+const correctPasscode = "182026";
 let currentPasscode = "";
 let attempts = 0;
 const maxAttempts = 3;
